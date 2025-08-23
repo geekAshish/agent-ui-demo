@@ -20,7 +20,7 @@ export const Input = ({
       onChange={onChange}
       placeholder={placeholder}
       className={clsx(
-        "w-full rounded-lg border text-sm text-gray-900 placeholder-gray-400 transition focus:outline-none text-center",
+        "w-full rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-400 transition focus:outline-none text-center",
         "px-3 py-0",
         className
       )}

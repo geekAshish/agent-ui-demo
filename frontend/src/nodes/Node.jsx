@@ -34,14 +34,14 @@ export const Node = ({ id, nodeType, variableName, handleCount, children }) => {
         ));
       })}
 
-      <div className="text-sm font-semibold text-gray-800">
-        {nodeType}
+      <div className="text-sm font-semibold bg-blue-100 text-blue-500 rounded p-1">
+        <p>{nodeType}</p>
       </div>
 
       <Input
         value={nodeVariable}
         onChange={handleChange}
-        className='p-0'
+        className='p-0 bg-blue-50'
       />
 
       <div className="flex flex-col gap-2 text-xs bg-white text-gray-700 bg-gray-100 p-3 rounded-lg shadow-inner">
