@@ -4,9 +4,6 @@ import { SubmitButton } from './submit';
 import { useStore } from 'reactflow';
 
 function App() {
-
-
-
   return (
     <div>
       <PipelineToolbar />

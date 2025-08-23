@@ -5,7 +5,7 @@ import Select from '../components/Select'
 
 const KnowlegdeBase = ({id, data}) => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [inputType, setInputType] = useState(data.inputType || 'Text');
+    const [inputType, setInputType] = useState('Text');
 
     const handleNameChange = (e) => {
         setSearchQuery(e.target.value);

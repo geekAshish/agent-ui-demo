@@ -6,7 +6,7 @@ import Select from '../components/Select';
 
 export const OutputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState("");
-  const [outputType, setOutputType] = useState(data.outputType || 'Text');
+  const [outputType, setOutputType] = useState('Text');
 
   const handleNameChange = (e) => {
     setCurrName(e.target.value);

@@ -1,18 +1,3 @@
-# from fastapi import FastAPI, Form
-
-# app = FastAPI()
-
-# @app.get('/')
-# def read_root():
-#     return {'Ping': 'Pong'}
-
-# @app.get('/pipelines/parse')
-# def parse_pipeline(pipeline: str = Form(...)):
-#     return {'status': 'parsed'}
-
-
-# ###############################
-
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,7 +5,7 @@ from typing import List, Dict, Any
 
 app = FastAPI()
 
-# Define Node + Edge schema
+# Node, and Edge schema
 class Node(BaseModel):
     id: str
     type: str
@@ -36,7 +21,7 @@ class Pipeline(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for dev, allow all
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

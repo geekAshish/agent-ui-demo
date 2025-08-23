@@ -24,14 +24,6 @@ export default function PipelineResultModal({ isOpen, onClose, result }) {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
           >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              x
-            </button>
-
             <h2 className="text-xl font-semibold text-center mb-4">
               Pipeline Summary
             </h2>
