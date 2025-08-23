@@ -4,7 +4,7 @@ import Input from '../components/Input';
 import { useState } from 'react';
 
 export const Node = ({ id, nodeType, variableName, handleCount, children }) => {
-  const [nodeVariable, setNodeVariable] = useState(variableName);
+  const [nodeVariable, setNodeVariable] = useState(variableName?.replace("-", "_"));
   
   const handleChange = (e) => {
     setNodeVariable(e.target.value)
@@ -16,8 +16,6 @@ export const Node = ({ id, nodeType, variableName, handleCount, children }) => {
     <div
       className="relative w-56 min-h-[100px] bg-gray-50 border border-gray-300 rounded-2xl shadow-md px-3 pt-3 pb-2 flex flex-col gap-2 hover:shadow-lg transition-shadow"
     >
-      
-      {/* Handles */}
       {Object.entries(handleCount)?.flatMap(([side, count]) => {
         const cfg = sideConfig?.[side];
         const positions = getHandleDotPositions(count);
