@@ -18,8 +18,9 @@ export const TextNode = ({ id, data }) => {
   const [variables, setVariables] = useState(extractVariables(currText));
 
   const nodes = useStore((s) => s.getNode());
-  const edges = useStore((s) => s.getEdge());
-  const setEdges = useStore.setState;  // direct access to update state
+
+  // direct access to update state
+  const setEdges = useStore.setState;
 
   const handleTextChange = (e) => {
     const newText = e.target.value;
@@ -32,8 +33,7 @@ export const TextNode = ({ id, data }) => {
       let newEdges = [...state.edges];
 
       newVars?.forEach((v, idx) => {
-        console.log(v, nodes);
-        const matchingNode = nodes.find(
+        const matchingNode = nodes?.find(
           (n) => n.id === v.replace("_", "-")
         );
 
@@ -41,11 +41,11 @@ export const TextNode = ({ id, data }) => {
           const edgeId = `${matchingNode.id}-to-${id}-left-${idx}`;
 
           // avoid duplicates
-          if (!newEdges.some((e) => e.id === edgeId)) {
-            newEdges.push({
+          if (!newEdges?.some((e) => e.id === edgeId)) {
+            newEdges?.push({
               id: edgeId,
               source: matchingNode.id,
-              sourceHandle: `${matchingNode.id}-right-0`, // assume right handle
+              sourceHandle: `${matchingNode.id}-right-0`,
               target: id,
               targetHandle: `${id}-left-${idx}`,
               type: 'smoothstep',
