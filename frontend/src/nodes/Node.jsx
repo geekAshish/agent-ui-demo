@@ -34,7 +34,7 @@ export const Node = ({ id, nodeType, variableName, handleCount, children }) => {
         ));
       })}
 
-      <div className="text-sm font-semibold bg-blue-100 text-blue-500 rounded p-1">
+      <div className="text-sm font-semibold bg-blue-100 text-blue-800 rounded p-1">
         <p>{nodeType}</p>
       </div>
 

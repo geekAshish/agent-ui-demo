@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Node } from './Node';
 import Input from '../components/TextBox';
 
@@ -31,12 +31,11 @@ export const TextNode = ({ id, data }) => {
     >
       <Input label={"Text"} value={currText} onChange={handleTextChange} />
 
-      {/* Show variables for clarity */}
-      {variables.length > 0 && (
+      {/* {variables.length > 0 && (
         <div className="mt-2 text-xs text-gray-500">
           Variables detected: {variables.join(", ")}
         </div>
-      )}
+      )} */}
     </Node>
   );
 };
