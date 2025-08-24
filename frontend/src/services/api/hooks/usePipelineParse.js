@@ -1,5 +1,7 @@
-import axios from "axios";
 import { useState } from "react";
+import axios from "axios";
+
+import { BASE_URL } from "../../../config/config";
 
 export const usePiplineParse = () => {
     const [result, setResult] = useState(null)
@@ -9,7 +11,7 @@ export const usePiplineParse = () => {
         try {
           setLoading(true);
     
-          const res = await axios.post("http://127.0.0.1:8000/pipelines/parse", {
+          const res = await axios.post(`${BASE_URL}/pipelines/parse`, {
             nodes,
             edges,
           });;
