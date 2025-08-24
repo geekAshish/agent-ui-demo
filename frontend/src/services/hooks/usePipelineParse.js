@@ -1,7 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
 
-import { BASE_URL } from "../../../config/config";
+import { getParsedData } from "../api/fetcher/piplelineParse";
 
 export const usePiplineParse = () => {
     const [result, setResult] = useState(null)
@@ -11,10 +10,7 @@ export const usePiplineParse = () => {
         try {
           setLoading(true);
     
-          const res = await axios.post(`${BASE_URL}/pipelines/parse`, {
-            nodes,
-            edges,
-          });;
+          const res = await getParsedData({nodes, edges})
 
           setResult(res.data)
           onSuccess(res.data)
