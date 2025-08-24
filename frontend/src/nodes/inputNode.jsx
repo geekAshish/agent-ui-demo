@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { Node } from './Node';
-import Input from '../components/TextBox';
-import Select from '../components/Select';
+import Input from '../components/ui/TextBox';
+import Select from '../components/ui/Select';
 
 export const InputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState("");

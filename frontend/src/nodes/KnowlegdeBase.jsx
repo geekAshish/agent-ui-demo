@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Node } from './Node'
-import Input from '../components/TextBox'
-import Select from '../components/Select'
+import Input from '../components/ui/TextBox'
+import Select from '../components/ui/Select'
 
 const KnowlegdeBase = ({id, data}) => {
     const [searchQuery, setSearchQuery] = useState("");

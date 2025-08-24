@@ -1,6 +1,6 @@
 import { Handle, Position } from 'reactflow';
 import { getHandleDotPositions, sideConfig } from '../utils/utils';
-import Input from '../components/Input';
+import Input from '../components/ui/Input';
 import { useState } from 'react';
 
 export const Node = ({ id, nodeType, variableName, handleCount, children }) => {

@@ -3,8 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useStore } from "./store";
 import PipelineResultModal from "./components/PipelineInfoModel";
-import Button from "./components/Button";
-import { usePiplineParse } from "./services/api/hook/usePipelineParse";
+import Button from "./components/ui/Button";
+import { usePiplineParse } from "./services/api/hooks/usePipelineParse";
 
 export const SubmitButton = () => {
   const [modalOpen, setModalOpen] = useState(false);

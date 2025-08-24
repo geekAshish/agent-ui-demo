@@ -10,13 +10,13 @@ import { InputNode } from './nodes/inputNode';
 import { LLMNode } from './nodes/llmNode';
 import { OutputNode } from './nodes/outputNode';
 import { TextNode } from './nodes/textNode';
-
-import 'reactflow/dist/style.css';
 import ImageNode from './nodes/imageNode';
 import KnowlegdeBase from './nodes/KnowlegdeBase';
 import APICallNode from './nodes/APICallNode';
 import WebScrape from './nodes/WebScrapeNode';
 import ConditionalChatBot from './nodes/ConditionalChatBot';
+
+import 'reactflow/dist/style.css';
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };

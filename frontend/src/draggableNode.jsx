@@ -1,6 +1,6 @@
 // draggableNode.js
 
-export const DraggableNode = ({ type, handleTopCount, handleBottomCount, handleLeftCount, handleRightCount, label }) => {
+export const DraggableNode = ({ type, handleTopCount, handleBottomCount, handleLeftCount, handleRightCount, label, icon: Icon }) => {
     const onDragStart = (event, nodeType, handleCount) => {
       const appData = { nodeType, handleCount }
       event.target.style.cursor = 'grabbing';
@@ -25,7 +25,8 @@ export const DraggableNode = ({ type, handleTopCount, handleBottomCount, handleL
         onDragEnd={(event) => (event.target.style.cursor = 'grab')}
         draggable
       >
-          <span style={{ color: '#fff' }}>{label}</span>
+        {Icon && <Icon className="w-6 h-6 mb-1 text-white" />}
+        <span className="text-white">{label}</span>
       </div>
     );
   };

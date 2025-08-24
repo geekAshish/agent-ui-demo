@@ -1,7 +1,7 @@
 // PipelineResultModal.jsx
 
 import { motion } from "framer-motion";
-import Button from "./Button";
+import Button from "./ui/Button";
 
 export default function PipelineResultModal({ isOpen, onClose, result }) {
   if (!isOpen) return null;

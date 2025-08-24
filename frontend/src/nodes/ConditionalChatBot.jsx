@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Node } from './Node'
-import Input from '../components/TextBox';
+import Input from '../components/ui/TextBox';
 
 const ConditionalChatBot = ({ id, data }) => {
   const [conditions, setConditions] = useState([

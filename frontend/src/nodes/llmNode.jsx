@@ -1,6 +1,6 @@
 // llmNode.js
 import { useState } from 'react';
-import Select from '../components/Select';
+import Select from '../components/ui/Select';
 import { Node } from './Node';
 
 export const LLMNode = ({ id, data }) => {

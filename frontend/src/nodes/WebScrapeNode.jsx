@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Input from '../components/TextBox';
+import Input from '../components/ui/TextBox';
 import { Node } from './Node';
 
 const WebScrape = ({id, data}) => {

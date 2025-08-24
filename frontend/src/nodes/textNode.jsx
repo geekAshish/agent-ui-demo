@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Node } from './Node';
-import Input from '../components/TextBox';
+import Input from '../components/ui/TextBox';
 import { useStore } from '../store';
 
 const extractVariables = (text) => {
